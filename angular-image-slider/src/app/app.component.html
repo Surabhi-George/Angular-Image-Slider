@@ -1,0 +1,20 @@
+<section>
+    <div class="container">
+        <div class="cp-space-between cp-head">
+            <h1>IMAGE SLIDER</h1>
+            <div *ngIf="images.length > 3">
+                <img (click)="leftClick()" src="https://image.flaticon.com/icons/svg/467/467136.svg" width="40" class="an-hover" alt="">
+                <img (click)="rightClick()" src="https://image.flaticon.com/icons/svg/467/467152.svg" width="40" class="an-hover" alt="">
+            </div>
+        </div>
+        <div>
+            <ul class="an-slider">
+                <li *ngFor="let data of images; let i = index;">
+                    <div class="an-image-thumb cp-vh-center" [style.backgroundImage]="'url('+ data.image +')'" >
+                        <h1>{{data.data}}</h1>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>    
+</section>
